@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/UI/Item.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Placeholder/white.png" type="Texture" id=2]
+
+[node name="Item" type="TextureButton"]
+modulate = Color( 0.917647, 0.819608, 0.819608, 1 )
+margin_right = 45.0
+margin_bottom = 45.0
+texture_normal = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -14.0
+text = "text"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_TextureButton_pressed"]

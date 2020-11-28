@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Placeholder/white.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/InventoryUI.gd" type="Script" id=2]
+
+[node name="Inventory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 28.0406
+margin_top = -274.033
+margin_right = -845.959
+margin_bottom = -624.033
+focus_mode = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color( 0.85098, 0.964706, 0.807843, 1 )
+margin_right = 150.0
+margin_bottom = 250.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background"]
+margin_left = 2.0
+margin_top = 53.0
+margin_right = 140.0
+margin_bottom = 208.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/ScrollContainer"]
+margin_right = 138.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="101" type="HBoxContainer" parent="Background/ScrollContainer/VBoxContainer"]
+margin_bottom = 30.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="Background/ScrollContainer/VBoxContainer/101"]
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="Count" type="Label" parent="Background/ScrollContainer/VBoxContainer/101/TextureButton"]
+margin_left = 0.27356
+margin_top = 15.3201
+margin_right = 15.2736
+margin_bottom = 29.3201
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Decor" type="TextureButton" parent="Background"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 1 )
+
+[node name="Craft" type="TextureButton" parent="Background"]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 46.9039
+margin_top = 0.606247
+margin_right = 91.9039
+margin_bottom = 45.6062
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Items" type="TextureButton" parent="Background"]
+margin_left = 95.3964
+margin_top = 0.9841
+margin_right = 140.396
+margin_bottom = 45.9841
+texture_normal = ExtResource( 1 )

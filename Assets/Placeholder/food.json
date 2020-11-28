@@ -1,0 +1,50 @@
+[
+  {
+    "foodName": "Strawberry",
+    "foodTaste": "Sweet",
+    "foodTex": "Juicy",
+    "foodTemp": "Neutral",
+    "foodEnergy": 10,
+    "foodFix": 10
+  },
+  {
+    "foodName": "Orange",
+    "foodTaste": "Sour",
+    "foodTex": "Juicy",
+    "foodTemp": "Neutral",
+    "foodEnergy": 10,
+    "foodFix": 10
+  },
+  {
+    "foodName": "Chips",
+    "foodTaste": "Salty",
+    "foodTex": "Crunchy",
+    "foodTemp": "Neutral",
+    "foodEnergy": 10,
+    "foodFix": 10
+  },
+  {
+    "foodName": "Grapefruit",
+    "foodTaste": "Bitter",
+    "foodTex": "Juicy",
+    "foodTemp": "Neutral",
+    "foodEnergy": 10,
+    "foodFix": 10
+  },
+  {
+    "foodName": "Chili",
+    "foodTaste": "Spicy",
+    "foodTex": "Dry",
+    "foodTemp": "Neutral",
+    "foodEnergy": 10,
+    "foodFix": 10
+  },
+  {
+    "foodName": "Tofu",
+    "foodTaste": "Bland",
+    "foodTex": "Soft",
+    "foodTemp": "Neutral",
+    "foodEnergy": 10,
+    "foodFix": 10
+  }
+]

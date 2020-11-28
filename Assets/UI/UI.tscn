@@ -1,0 +1,218 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Fonts/LovedbytheKing.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Fonts/Neucha.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/Placeholder/white.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/UI.gd" type="Script" id=5]
+[ext_resource path="res://Assets/UI/UIContainer.gd" type="Script" id=6]
+[ext_resource path="res://Assets/UI/Textures/playerIcon.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/InventoryUI.gd" type="Script" id=8]
+[ext_resource path="res://Assets/UI/LevelBG.gd" type="Script" id=9]
+[ext_resource path="res://Assets/UI/Profile.tscn" type="PackedScene" id=10]
+
+[node name="Container" type="CanvasLayer"]
+script = ExtResource( 6 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="Control"]
+self_modulate = Color( 0.870588, 1, 0.839216, 1 )
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 152.0
+margin_bottom = 2.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="HBoxContainer" parent="Control/BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerInfo" type="HBoxContainer" parent="Control/BG/UI"]
+margin_right = 327.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AvatarButton" type="Button" parent="Control/BG/UI/PlayerInfo"]
+margin_right = 134.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelBG" type="TextureRect" parent="Control/BG/UI/PlayerInfo/AvatarButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 45, 45 )
+texture = ExtResource( 7 )
+stretch_mode = 1
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelText" type="Label" parent="Control/BG/UI/PlayerInfo/AvatarButton/LevelBG"]
+margin_left = 74.1678
+margin_top = 75.3923
+margin_right = 120.168
+margin_bottom = 123.392
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.0509804, 0.00784314, 0.00784314, 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XpBar" type="TextureProgress" parent="Control/BG/UI/PlayerInfo"]
+margin_left = 138.0
+margin_right = 154.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+tint_progress = Color( 0.329412, 0.439216, 0.764706, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusBars" type="VBoxContainer" parent="Control/BG/UI/PlayerInfo"]
+margin_left = 158.0
+margin_right = 327.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StabilityBar" type="TextureProgress" parent="Control/BG/UI/PlayerInfo/StatusBars"]
+margin_right = 169.0
+margin_bottom = 73.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+step = 0.01
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 4 )
+tint_under = Color( 0.588235, 0.713726, 0.556863, 1 )
+tint_progress = Color( 0.764706, 0.372549, 0.847059, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="TextureProgress" parent="Control/BG/UI/PlayerInfo/StatusBars"]
+margin_top = 77.0
+margin_right = 169.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+step = 0.01
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 4 )
+tint_under = Color( 0.560784, 0.701961, 0.572549, 1 )
+tint_over = Color( 1, 1, 1, 0 )
+tint_progress = Color( 0.168627, 0.262745, 0.870588, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inventory" type="TextureRect" parent="Control/BG/UI"]
+modulate = Color( 0.937255, 0.92549, 0.866667, 1 )
+margin_left = 331.0
+margin_right = 855.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.6
+texture = ExtResource( 4 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="Items" type="ScrollContainer" parent="Control/BG/UI/Inventory"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 34.0
+margin_bottom = -31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_vertical_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="HBoxContainer" parent="Control/BG/UI/Inventory/Items"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/BG/UI"]
+margin_left = 859.0
+margin_right = 1024.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="HomeButton" type="TextureButton" parent="Control/BG/UI/VBoxContainer"]
+margin_right = 165.0
+margin_bottom = 73.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="TextureButton" parent="Control/BG/UI/VBoxContainer"]
+modulate = Color( 0.356863, 0.368627, 0.454902, 1 )
+margin_top = 77.0
+margin_right = 165.0
+margin_bottom = 150.0
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LuxLabel" type="Label" parent="Control/BG"]
+margin_left = 339.711
+margin_top = 67.6599
+margin_right = 420.711
+margin_bottom = 137.66
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.0313726, 0.00392157, 0.00392157, 1 )
+text = "Lux: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Profile" parent="Control" instance=ExtResource( 10 )]
+visible = false
+[connection signal="pressed" from="Control/BG/UI/PlayerInfo/AvatarButton" to="Control" method="_on_AvatarButton_pressed"]
+[connection signal="pressed" from="Control/BG/UI/VBoxContainer/HomeButton" to="Control" method="_on_HomeButton_pressed"]
+[connection signal="pressed" from="Control/BG/UI/VBoxContainer/SaveButton" to="Control" method="_on_SaveButton_pressed"]

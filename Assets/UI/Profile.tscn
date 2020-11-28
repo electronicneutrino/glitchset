@@ -1,0 +1,236 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Fonts/LovedbytheKing.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Placeholder/white.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/Profile.gd" type="Script" id=3]
+
+[node name="Profile" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color( 0.215686, 0.266667, 0.321569, 1 )
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -178.0
+margin_bottom = 135.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TextureButton" parent="Background"]
+self_modulate = Color( 0.941176, 0.321569, 0.321569, 1 )
+margin_left = 973.0
+margin_top = 7.0
+margin_right = 1011.0
+margin_bottom = 47.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="HBoxContainer" parent="Background"]
+margin_left = 239.0
+margin_top = 8.0
+margin_right = 975.0
+margin_bottom = 252.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main" type="VBoxContainer" parent="Background/Info"]
+margin_right = 366.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Species" type="Label" parent="Background/Info/Main"]
+margin_right = 366.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Speices"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Colour1" type="Label" parent="Background/Info/Main"]
+margin_top = 35.0
+margin_right = 366.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Color1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Colour2" type="Label" parent="Background/Info/Main"]
+margin_top = 70.0
+margin_right = 366.0
+margin_bottom = 101.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Color2 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pattern" type="Label" parent="Background/Info/Main"]
+margin_top = 105.0
+margin_right = 366.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Pattern"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Feature" type="Label" parent="Background/Info/Main"]
+margin_top = 140.0
+margin_right = 366.0
+margin_bottom = 171.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Feature"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Eye" type="Label" parent="Background/Info/Main"]
+margin_top = 175.0
+margin_right = 366.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Eye"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tail" type="Label" parent="Background/Info/Main"]
+margin_top = 210.0
+margin_right = 366.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Tail
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rec" type="VBoxContainer" parent="Background/Info"]
+margin_left = 370.0
+margin_right = 736.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Species" type="Label" parent="Background/Info/Rec"]
+margin_right = 366.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Speices"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Colour1" type="Label" parent="Background/Info/Rec"]
+margin_top = 35.0
+margin_right = 366.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Color1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Colour2" type="Label" parent="Background/Info/Rec"]
+margin_top = 70.0
+margin_right = 366.0
+margin_bottom = 101.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Color2 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pattern" type="Label" parent="Background/Info/Rec"]
+margin_top = 105.0
+margin_right = 366.0
+margin_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Pattern"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Feature" type="Label" parent="Background/Info/Rec"]
+margin_top = 140.0
+margin_right = 366.0
+margin_bottom = 171.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Feature"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Eye" type="Label" parent="Background/Info/Rec"]
+margin_top = 175.0
+margin_right = 366.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Eye"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tail" type="Label" parent="Background/Info/Rec"]
+margin_top = 210.0
+margin_right = 366.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Tail
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Picture" type="TextureRect" parent="."]
+anchor_top = 0.199
+anchor_bottom = 0.199
+margin_left = 18.0646
+margin_top = 23.6264
+margin_right = 208.065
+margin_bottom = 217.626
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Picture"]
+margin_left = 7.22971
+margin_top = 2.4099
+margin_right = 185.23
+margin_bottom = 72.4099
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Name"
+[connection signal="pressed" from="Background/Close" to="." method="_on_Close_pressed"]

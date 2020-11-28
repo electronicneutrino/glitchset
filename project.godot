@@ -1,0 +1,98 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Creature",
+"language": "GDScript",
+"path": "res://Assets/Creatures/Creature.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Assets/Scripts/Enemy.gd"
+}, {
+"base": "Reference",
+"class": "Gene",
+"language": "GDScript",
+"path": "res://Assets/Creatures/genes.gd"
+}, {
+"base": "Node",
+"class": "Scene",
+"language": "GDScript",
+"path": "res://Assets/Scripts/Scene.gd"
+} ]
+_global_script_class_icons={
+"Creature": "",
+"Enemy": "",
+"Gene": "",
+"Scene": ""
+}
+
+[application]
+
+config/name="GlitchSet"
+run/main_scene="res://Assets/UI/Start.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Enums="*res://Assets/Scripts/Global/enums.gd"
+Consts="*res://Assets/Scripts/Const.gd"
+Utils="*res://Assets/Scripts/Util.gd"
+Food="*res://Assets/Scripts/Data/Food.gd"
+Decor="*res://Assets/Scripts/Data/Decor.gd"
+TreeDrops="*res://Assets/Scripts/Data/TreeDrops.gd"
+EnemyDrops="*res://Assets/Scripts/Data/EnemyDrops.gd"
+Player="*res://Assets/Scripts/Player.gd"
+Inventory="*res://Assets/UI/Inventory.gd"
+GameData="*res://Assets/Scripts/Persistent/GameData.gd"
+HomeData="*res://Assets/Scripts/Persistent/HomeData.gd"
+
+[display]
+
+window/size/always_on_top=true
+window/stretch/mode="2d"
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interact={
+"deadzone": 0.49,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.831373, 0.941176, 0.988235, 1 )
+environment/default_environment="res://default_env.tres"
